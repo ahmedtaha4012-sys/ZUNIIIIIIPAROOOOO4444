@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love Zunairah 💕</title>
+<style>
+body {
+  margin:0;
+  font-family: 'Arial', sans-serif;
+  background:#fff0f5;
+  color:#333;
+  overflow-x:hidden;
+}
+h1,h2,p{margin:0;padding:0.5rem;}
+.center{text-align:center;}
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  animation:fadeIn 2s ease-in;
+}
+.hero button{
+  margin-top:2rem;
+  padding:15px 25px;
+  font-size:18px;
+  border-radius:30px;
+  border:none;
+  background:#ff77a9;
+  color:white;
+  cursor:pointer;
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+.hero button:hover{transform:scale(1.1);}
+.hidden{display:none;}
+.section{
+  padding:4rem 2rem;
+  max-width:700px;
+  margin:0 auto;
+  animation:fadeIn 2s ease-in;
+  position:relative;
+}
+.heart{
+  position:absolute;
+  font-size:24px;
+  color:#ff4d6d;
+  animation:floatUp 5s linear infinite;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0deg); opacity:1;}
+  100%{transform:translateY(-800px) rotate(360deg); opacity:0;}
+}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.typewriter{
+  border-right:0.15em solid #ff4d6d;
+  white-space:nowrap;
+  overflow:hidden;
+  width:0;
+  animation:typing 4s steps(80,end) forwards, blink 0.75s step-end infinite;
+  font-size:24px;
+}
+@keyframes typing{from{width:0;}to{width:100%;}}
+@keyframes blink{50%{border-color:transparent;}}
+.button-egg{
+  margin-top:2rem;
+  padding:12px 20px;
+  background:#ff9ac1;
+  border-radius:20px;
+  border:none;
+  color:white;
+  cursor:pointer;
+  font-size:16px;
+}
+.nickname{
+  position:absolute;
+  font-weight:bold;
+  color:#ff4d6d;
+  font-size:20px;
+  animation:floatNick 8s linear infinite;
+}
+@keyframes floatNick{
+  0%{transform:translateY(100vh) rotate(0deg); opacity:1;}
+  100%{transform:translateY(-100px) rotate(360deg); opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<!-- Background music -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Floating hearts -->
+<div id="hearts"></div>
+
+<!-- Hero -->
+<div class="hero center">
+  <h1 class="typewriter">My Love… My Zunairah 💕</h1>
+  <button onclick="showStory()">Enter Our Love Story 💌</button>
+</div>
+
+<!-- Main story -->
+<div id="story" class="hidden">
+
+<!-- Section 1: Today -->
+<div class="section center">
+  <h2>Today is Special 🌸</h2>
+  <p>My love, my Zunairah, my everything…  
+  Today is the most special day of my life!  
+  Today a tiny miracle came into this world, and I feel so grateful you exist ❤️</p>
+</div>
+
+<!-- Section 2: First Meeting -->
+<div class="section center">
+  <h2>Our First Meeting ✨</h2>
+  <p>22 May 2024 — When I first saw you, I fell in love with your beautiful eyes.  
+  Life changed that day. You were in a pink dress, so beautiful, and I secretly watched you 😭</p>
+</div>
+
+<!-- Section 3: Memorable Moments -->
+<div class="section center">
+  <h2>Memorable Moments 💖</h2>
+  <p>Our first real hug in the UK, first kiss in the bridal room, the Mangla Cruise…  
+  9 December 2025 — the day I knew you are my forever. I love you so much, my love ❤️</p>
+</div>
+
+<!-- Section 4: Promises -->
+<div class="section center">
+  <h2>My Promises 💌</h2>
+  <ul>
+    <li>I will love you till my last breath</li>
+    <li>I will always care for you</li>
+    <li>I will marry you and be with you as soon as possible</li>
+    <li>I will become a better version of myself for us</li>
+  </ul>
+</div>
+
+<!-- Section 5: Nicknames & Easter Egg -->
+<div class="section center">
+  <h2>Nicknames & Playful 🥰</h2>
+  <p>Zuniiparo, Pisti, Jaaaaaaaaaaaannnn, Paroo — my cutest baby, my wifey ❤️</p>
+  <button class="button-egg" onclick="showEgg()">Click for Secret Message 💖</button>
+  <div id="secretEgg" class="hidden">
+    <p>“Phir hard hai touch karu 😉  
+    I miss you more than words… You’re my everything ❤️”</p>
+  </div>
+</div>
+
+<!-- Section 6: Countdown -->
+<div class="section center">
+  <h2>Countdown ⏳</h2>
+  <p>Every second brings me closer to hugging you again 💕</p>
+  <div id="countdown"></div>
+</div>
+
+<!-- Section 7: Full Letter -->
+<div class="section center">
+  <h2>From My Heart 💖</h2>
+  <p>My love… I love you more than words.  
+  I’m forever thankful that you were born.  
+  You changed my life the moment you came in.  
+  Two years ago, when we met, I fell in love with your eyes and smile…  
+  From that day till now, you are my future wifey, my everything… I just love you so much, my love ❤️</p>
+</div>
+
+</div>
+
+<script>
+// Show main story
+function showStory(){ document.getElementById('story').classList.remove('hidden'); window.scrollTo({top:0,behavior:'smooth'});}
+
+// Secret Easter egg
+function showEgg(){ document.getElementById('secretEgg').classList.remove('hidden');}
+
+// Countdown timer
+var countDownDate = new Date("March 25, 2026 18:00:00").getTime();
+var x = setInterval(function(){
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days=Math.floor(distance/(1000*60*60*24));
+  var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+  var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+  var seconds=Math.floor((distance%(1000*60))/1000);
+  document.getElementById("countdown").innerHTML=days+"d "+hours+"h "+minutes+"m "+seconds+"s ";
+  if(distance<0){ clearInterval(x); document.getElementById("countdown").innerHTML="Finally… Our hug is here ❤️";}
+},1000);
+
+// Floating hearts
+function createHeart(){ 
+  var heart=document.createElement('div');
+  heart.className='heart';
+  heart.innerHTML='❤️';
+  heart.style.left=Math.random()*window.innerWidth+'px';
+  heart.style.fontSize=(10+Math.random()*30)+'px';
+  document.body.appendChild(heart);
+  setTimeout(()=>{heart.remove();},5000);
+}
+setInterval(createHeart,300);
+
+// Floating nicknames
+function floatNickname(name){
+  var nick=document.createElement('div');
+  nick.className='nickname';
+  nick.innerText=name;
+  nick.style.left=Math.random()*window.innerWidth+'px';
+  document.body.appendChild(nick);
+  setTimeout(()=>{nick.remove();},8000);
+}
+setInterval(()=>{floatNickname('Jaaaaaaaaaannnn'); floatNickname('Zuniiparo'); floatNickname('Pisti');},1500);
+
+</script>
+
+</body>
+</html>
